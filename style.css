@@ -1,11 +1,88 @@
-/* Keep previous styles */
+/* General Body Styling */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #2c2f33;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
 
+/* Heading */
+h2 {
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form#sendForm {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 400px;
+  gap: 10px;
+}
+
+form#sendForm input,
+form#sendForm textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #7289da;
+  background-color: #23272a;
+  color: #ffffff;
+  font-size: 14px;
+}
+
+form#sendForm input:focus,
+form#sendForm textarea:focus {
+  outline: none;
+  border-color: #99aab5;
+}
+
+/* Submit Button */
+form#sendForm button {
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #7289da;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+form#sendForm button:hover {
+  background-color: #5b6eae;
+}
+
+/* Response Display */
+#response {
+  margin-top: 15px;
+  font-size: 14px;
+  min-height: 20px;
+  text-align: center;
+}
+
+/* Chat Container */
+.chat-container {
+  margin-top: 20px;
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  background-color: #23272a;
+  border-radius: 5px;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+/* Buttons Section */
 .buttons {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
 
+/* Stop Button */
 #stopButton {
   background-color: #f04747;
   color: white;
