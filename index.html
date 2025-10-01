@@ -7,18 +7,20 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h2>Discord Message Sender</h2>
+  <div class="container">
+    <h2>Discord Message Sender</h2>
 
-  <form id="sendForm" autocomplete="off">
-    <input type="text" id="channelId" placeholder="Channel ID" />
-    <textarea id="message" rows="4" placeholder="Message"></textarea>
-    <input type="text" id="token" placeholder="Authorization Token (e.g., Bot <token>)" />
-    <button type="submit">Send</button>
-  </form>
+    <form id="sendForm" autocomplete="off">
+      <input type="text" id="channelId" placeholder="Channel ID" />
+      <textarea id="message" rows="3" placeholder="Message"></textarea>
+      <input type="text" id="token" placeholder="Authorization Token (e.g., Bot <token>)" />
+      <button type="submit">Send</button>
+    </form>
 
-  <div id="response" aria-live="polite"></div>
+    <div id="response" aria-live="polite"></div>
 
-  <div class="chat-container" id="chat"></div>
+    <div class="chat-container" id="chat"></div>
+  </div>
 
   <script src="app.js"></script>
 </body>
