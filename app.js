@@ -24,7 +24,6 @@ form.addEventListener("submit", async (e) => {
     const res = await fetch(`https://discord.com/api/v9/channels/${channelId}/messages`, {
       method: "POST",
       headers: {
-        // Enter full header value, e.g. "Bot YOUR_BOT_TOKEN" or "Bearer <token>"
         "Authorization": token,
         "Content-Type": "application/json"
       },
@@ -34,7 +33,7 @@ form.addEventListener("submit", async (e) => {
     const data = await res.json();
 
     if (res.ok) {
-      responseDiv.textContent = "Message sent successfully:\n" + JSON.stringify(data, null, 2);
+      responseDiv.textContent = "Message sent successfully!";
       addLocalMessage(channelId, message);
       messageInput.value = "";
       messageInput.focus();
@@ -52,7 +51,7 @@ function addLocalMessage(channelId, message) {
 
   const meta = document.createElement("div");
   meta.className = "meta";
-  meta.textContent = `[${new Date().toLocaleString()}] Channel: ${channelId}`;
+  meta.textContent = `[${new Date().toLocaleTimeString()}] Channel: ${channelId}`;
 
   const body = document.createElement("div");
   body.textContent = message;
